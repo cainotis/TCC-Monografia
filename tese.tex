@@ -23,8 +23,8 @@
 %
 % Aqui também definimos a língua padrão do documento
 % (a última da lista) e línguas adicionais.
-%\documentclass[12pt,twoside,brazilian,english]{book}
-\documentclass[12pt,twoside,english,brazilian]{book}
+\documentclass[12pt,twoside,brazilian,english]{book}
+% \documentclass[12pt,twoside,english,brazilian]{book}
 
 % Ao invés de definir o tamanho das margens, vamos definir os tamanhos do
 % texto, do cabeçalho e do rodapé, e deixamos a package geometry calcular
@@ -115,59 +115,33 @@
     subtitleen={a subtitle},
 }
 
-\author[fem]{Nome Completo}
+\author{Cainã Setti Galante}
 
 % Para TCCs, este comando define o supervisor
-\orientador[fem]{Profª. Drª. Fulana de Tal}
+\orientador{Prof. Denis Deratani Mauá}
 
 % Se não houver, remova; se houver mais de um, basta
 % repetir o comando quantas vezes forem necessárias
-\coorientador{Prof. Dr. Ciclano de Tal}
-\coorientador[fem]{Profª. Drª. Beltrana de Tal}
+% \coorientador{Prof. Dr. Ciclano de Tal}
+\coorientador[fem]{Profª. Nina S. T. Hirata}
 
 % A página de rosto da versão para depósito (ou seja, a versão final
 % antes da defesa) deve ser diferente da página de rosto da versão
 % definitiva (ou seja, a versão final após a incorporação das sugestões
 % da banca).
 \defesa{
-  nivel=mestrado, % mestrado, doutorado ou tcc
+  nivel=tcc, % mestrado, doutorado ou tcc
   % É a versão para defesa ou a versão definitiva?
-  %definitiva,
+  definitiva,
   % É qualificação?
   %quali,
   programa={Ciência da Computação},
-  membrobanca={Profª. Drª. Fulana de Tal (orientadora) -- IME-USP [sem ponto final]},
+  membrobanca={Profª. Drª. Nina S. T. Hirata -- IME-USP},
   % Em inglês, não há o "ª"
   %membrobanca{Prof. Dr. Fulana de Tal (advisor) -- IME-USP [sem ponto final]},
-  membrobanca={Prof. Dr. Ciclano de Tal -- IME-USP [sem ponto final]},
-  membrobanca={Profª. Drª. Convidada de Tal -- IMPA [sem ponto final]},
-  % Se não houve bolsa, remova
-  %
-  % Norma sobre agradecimento por auxílios da FAPESP:
-  % https://fapesp.br/11789/referencia-ao-apoio-da-fapesp-em-todas-as-formas-de-divulgacao
-  %
-  % Norma sobre agradecimento por auxílios da CAPES (Portaria 206,
-  % de 4 de Setembro de 2018):
-  % https://www.in.gov.br/materia/-/asset_publisher/Kujrw0TZC2Mb/content/id/39729251/do1-2018-09-05-portaria-n-206-de-4-de-setembro-de-2018-39729135
-  %
-  %apoio={O presente trabalho foi realizado com apoio da Coordenação
-  %       de Aperfeiçoamento\\ de Pessoal de Nível Superior -- Brasil
-  %       (CAPES) -- Código de Financiamento 001}, % o código é sempre 001
-  %
-  %apoio={This study was financed in part by the Coordenação de
-  %       Aperfeiçoamento\\ de Pessoal de Nível Superior -- Brasil
-  %       (CAPES) -- Finance Code 001}, % o código é sempre 001
-  %
-  %apoio={Durante o desenvolvimento deste trabalho, o autor recebeu\\
-  %       auxílio financeiro da FAPESP -- processo nº aaaa/nnnnn-d},
-  %
-  %apoio={During the development if this work, the author received\\
-  %       financial support from FAPESP -- grant \#aaaa/nnnnn-d},
-  %
-  apoio={Durante o desenvolvimento deste trabalho o autor
-         recebeu auxílio financeiro da XXXX},
+  % membrobanca={Prof. Dr. Ciclano de Tal -- IME-USP [sem ponto final]},
   local={São Paulo},
-  data=2017-08-10, % YYYY-MM-DD
+  data=2022-11-15, % YYYY-MM-DD
   % A licença do seu trabalho. Use CC-BY, CC-BY-NC, CC-BY-ND, CC-BY-SA,
   % CC-BY-NC-SA ou CC-BY-NC-ND para escolher a licença Creative Commons
   % correspondente (o sistema insere automaticamente o texto da licença).
@@ -273,10 +247,9 @@ texto texto texto texto. Texto opcional.
 \disablenewpage{\chapter*{Lista de abreviaturas}}
 
 \begin{tabular}{rl}
-   CFT & Transformada contínua de Fourier (\emph{Continuous Fourier Transform})\\
-   DFT & Transformada discreta de Fourier (\emph{Discrete Fourier Transform})\\
-  EIIP & Potencial de interação elétron-íon (\emph{Electron-Ion Interaction Potentials})\\
-  STFT & Transformada de Fourier de tempo reduzido (\emph{Short-Time Fourier Transform})\\
+   DQN & \emph{Deep-Q Networks}\\
+    AI & Inteligência artificial (\emph{Artificial intelligence})\\
+   MIT & Instituto de Tecnologia de Massachusetts (\emph{Massachusetts Institute of Technology}) \\
   ABNT & Associação Brasileira de Normas Técnicas\\
    URL & Localizador Uniforme de Recursos (\emph{Uniform Resource Locator})\\
    IME & Instituto de Matemática e Estatística\\
@@ -284,13 +257,13 @@ texto texto texto texto. Texto opcional.
 \end{tabular}
 
 %\chapter*{Lista de símbolos}
-\disablenewpage{\chapter*{Lista de símbolos}}
+% \disablenewpage{\chapter*{Lista de símbolos}}
 
-\begin{tabular}{rl}
-  $\omega$ & Frequência angular\\
-    $\psi$ & Função de análise \emph{wavelet}\\
-    $\Psi$ & Transformada de Fourier de $\psi$\\
-\end{tabular}
+% \begin{tabular}{rl}
+%   $\omega$ & Frequência angular\\
+%     $\psi$ & Função de análise \emph{wavelet}\\
+%     $\Psi$ & Transformada de Fourier de $\psi$\\
+% \end{tabular}
 
 % Quebra de página manual
 \clearpage
@@ -348,12 +321,8 @@ texto texto texto texto. Texto opcional.
 % Espaçamento simples
 \singlespacing
 
-\input{conteudo/00-exemplo-introducao}
-\input{conteudo/01-exemplo-normas-ime}
-\input{conteudo/02-exemplo-usando-o-modelo}
-\input{conteudo/03-exemplo-latex}
-\input{conteudo/04-exemplo-tutorial}
-\input{conteudo/05-exemplo-exemplos}
+\input{conteudo/00-introducao}
+\input{conteudo/01-duckietown}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% APÊNDICES E ANEXOS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -393,7 +362,7 @@ texto texto texto texto. Texto opcional.
 % só há apêndices, sem anexos, provavelmente não é necessário.
 \addappheadtotoc
 
-\input{conteudo/apendice-exemplo-pseudocodigo}
+% \input{conteudo/exemplo/apendice-exemplo-pseudocodigo} 
 \par
 
 %%%% Anexos %%%%
@@ -410,7 +379,7 @@ texto texto texto texto. Texto opcional.
 % só há anexos, sem apêndices, provavelmente não é necessário.
 \addappheadtotoc
 
-\input{conteudo/anexo-exemplo-faq}
+\input{conteudo/exemplo/anexo-exemplo-faq}
 \par
 
 
