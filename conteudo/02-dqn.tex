@@ -17,4 +17,13 @@ DQN ou \textit{Deep Q-Network}\index{Deep Q-Network} é um algoritmo desenvolvid
 \label{sec:q-learning}
 
 \enlargethispage{.5\baselineskip}
-WIP
+
+\textit{Q-learning}\index{Q-learning} é um modelo de inteligência artificial desenvolvido para se espelhar no com o qual os animais aprendem ~\citep{Watkins:PhD}. Dessa forma ele aprende direto das interações com o ambiente ao invés de um modelo do ambiente, como resultado o agente não precisa de um modelo desenvolvido a priori e se reduz o risco do agente introduzir bias que gerem uma grande perda de resultados quando estiver interagindo com o ambiente real. Além disso, o \textit{Q-learning} utiliza uma política diferente para colher os dados da qual ele tenta otimizar, o que resulta em uma maior eficiência amostral em virtude do reuso mais eficiente dos dados ~\citep{Nguyen_La_2019}.
+
+
+No entanto, o algoritmo do \textit{Q-learning} depende da criação, preenchimento e armazenamento de uma tabela com os valores aproximados para cada estado-ação do ambiente, chamada de \textit{Q-table}. Ao passo que, a necessidade da tabela inviabiliza a utilização do algoritmo sem modificações para problemas mais complexos, por causa do armamento necessário para tais tabelas, o algoritmo possui bons resultados para ambientes simples além de ser a base para modelos mais complexos de aprendizado por reforço. O \textit{Q-learning} na fase de treino possui uma probabilidade de escolher uma ação aleatória para aumentar a exploração do ambiente, o que reduz as chances de ficar preso em mínimos locais, e algoritmo usa o resultado de cada ação para atualizar os valores de $Q(S, A)$ conforme a seguinte equação de Bellman \ref{eq:Bellman}~\citep{Bellman_1954} onde $S$ é o estado, $A$ é a ação, $\alpha$ é a taxa de aprendizado, $\gamma$ é o fator de desconto, $R$ é a recompensa e $t$ é o instante de tempo.
+
+\begin{equation}
+	\label{eq:Bellman}
+	Novo \ Q(S_{t}, A_{t}) = Q(S_{t}, A_{t}) + \alpha * (R_{t} + \gamma * maxQ(S_{t+1}, a) - Q(S_{t}, A_{t}))
+\end{equation}
